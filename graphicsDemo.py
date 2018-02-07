@@ -1,6 +1,6 @@
 #Matt Westelman
 #2/7/18
-#graphicsDemo.py - Intro to ggame
+#graphicsDemo.py - Intro to game
 
 from ggame import *
 
@@ -14,8 +14,13 @@ blackOutline = LineStyle(1,black)
 redRectangle = RectangleAsset(200,100,blackOutline,red) #Width, height, outline and fill
 blueCircle = CircleAsset(50,blackOutline,blue) #Radius, outline, fill
 greenEllipse = EllipseAsset(100, 50, blackOutline, green) #Width, height, outline, fill
+blackLine = LineAsset(50,160,blackOutline) #x_endpoint, y_endpoint, lineStyle
+redTriangle = PolygonAsset([(0,0), (120,180), (60,300)], blackOutline,red) #endpoints, outline, fill
 
 Sprite(redRectangle)
 Sprite(blueCircle,(50,50))
 Sprite(greenEllipse,(200,400))
+Sprite(blackLine)
+Sprite(redTriangle)
+
 App().run()
