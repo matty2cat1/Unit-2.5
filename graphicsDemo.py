@@ -16,11 +16,12 @@ blueCircle = CircleAsset(50,blackOutline,blue) #Radius, outline, fill
 greenEllipse = EllipseAsset(100, 50, blackOutline, green) #Width, height, outline, fill
 blackLine = LineAsset(50,160,blackOutline) #x_endpoint, y_endpoint, lineStyle
 redTriangle = PolygonAsset([(0,0), (120,180), (60,300)], blackOutline,red) #endpoints, outline, fill
+text = TextAsset(">Current Year",fill=green, style='bold 40pt Times') #Green texting like 4Chan
 
 Sprite(redRectangle)
 Sprite(blueCircle,(50,50))
 Sprite(greenEllipse,(200,400))
 Sprite(blackLine)
 Sprite(redTriangle)
-
+Sprite(text,(100,100))
 App().run()
