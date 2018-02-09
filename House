@@ -1,6 +1,6 @@
 #Matt Westelman
 #2/7/18
-#graphicsDemo.py - Intro to game
+#house.py - Building a house
 
 from ggame import *
 
@@ -9,19 +9,24 @@ green = Color(0x00FF00,1)#green
 blue = Color(0x0000FF,1) #blue
 black = Color(0x000000,1) #Black
 maple = Color(0xD2691E,1) #maplewood
+aqua = Color(0x00FFFF,1) #Aqua
 
 blackOutline = LineStyle(1,black)
 
 redRectangle = RectangleAsset(60,60,blackOutline,red) #Width, height, outline and fill
-orangeRectangle = RectangleAsset(20,10,blackOutline, maple)
+orangeRectangle = RectangleAsset(10,20,blackOutline, maple) #DOOR
 blueCircle = CircleAsset(50,blackOutline,blue) #Radius, outline, fill
 greenEllipse = EllipseAsset(100, 50, blackOutline, green) #Width, height, outline, fill
 blackLine = LineAsset(50,160,blackOutline) #x_endpoint, y_endpoint, lineStyle
 blueTriangle = PolygonAsset([(30,30), (60,52), (0,52)], blackOutline,blue) #endpoints, outline, fill
-text = TextAsset("It's a house",fill=green, style='bold 40pt Times') #Green texting like 4Chan
+aquaRectangle = RectangleAsset(10,10,blackOutline,aqua)
+
+text = TextAsset("It's a house",fill=green, style='bold 40pt Times') #Green texting like we are on 4chan
 
 Sprite(redRectangle,(30,20))
 Sprite(blueTriangle,(30,0))
 Sprite(text,(100,100))
+Sprite(orangeRectangle, (35,60))
+Sprite(aquaRectangle, (50, 60))
 
 App().run()
